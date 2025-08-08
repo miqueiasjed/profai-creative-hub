@@ -8,7 +8,8 @@ import {
   FolderOpen, 
   Settings,
   Menu,
-  X
+  X,
+  Award
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -17,6 +18,7 @@ const menuItems = [
   { title: "Planejar Aula", url: "/lesson-plan", icon: BookOpen },
   { title: "Imagens para Pintar", url: "/coloring-images", icon: Palette },
   { title: "Treinamentos", url: "/training", icon: GraduationCap },
+  { title: "Meus Certificados", url: "/certificates", icon: Award },
   { title: "Meus Arquivos", url: "/files", icon: FolderOpen },
   { title: "Configurações", url: "/settings", icon: Settings },
 ];

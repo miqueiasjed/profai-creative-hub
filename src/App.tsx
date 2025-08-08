@@ -8,6 +8,8 @@ import Dashboard from "./pages/Dashboard";
 import LessonPlan from "./pages/LessonPlan";
 import ColoringImages from "./pages/ColoringImages";
 import Training from "./pages/Training";
+import CourseViewer from "./pages/CourseViewer";
+import Certificates from "./pages/Certificates";
 import Files from "./pages/Files";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
@@ -26,6 +28,8 @@ const App = () => (
             <Route path="lesson-plan" element={<LessonPlan />} />
             <Route path="coloring-images" element={<ColoringImages />} />
             <Route path="training" element={<Training />} />
+            <Route path="training/course/:courseId" element={<CourseViewer />} />
+            <Route path="certificates" element={<Certificates />} />
             <Route path="files" element={<Files />} />
             <Route path="settings" element={<Settings />} />
           </Route>

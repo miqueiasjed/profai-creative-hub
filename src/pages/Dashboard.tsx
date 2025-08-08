@@ -151,6 +151,67 @@ export default function Dashboard() {
         </div>
       </section>
 
+      {/* Live Classes Calendar */}
+      <section className="section">
+        <div className="mb-6">
+          <h2 className="text-xl font-semibold text-foreground mb-2">Aulas Ao Vivo</h2>
+          <p className="text-muted-foreground">Próximas transmissões e eventos</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex items-center justify-between mb-3">
+              <span className="px-2 py-1 bg-primary/10 text-primary rounded-md text-sm font-medium">Hoje</span>
+              <span className="text-sm text-muted-foreground">14:00</span>
+            </div>
+            <h3 className="font-semibold text-card-foreground mb-2">Workshop: IA em Atividades Lúdicas</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Como criar jogos educativos usando inteligência artificial
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-muted-foreground">60 min • Online</span>
+              <Button size="sm" className="flex items-center gap-2">
+                <Eye size={14} />
+                Entrar
+              </Button>
+            </div>
+          </div>
+
+          <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-orange-500 shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex items-center justify-between mb-3">
+              <span className="px-2 py-1 bg-muted text-muted-foreground rounded-md text-sm font-medium">Amanhã</span>
+              <span className="text-sm text-muted-foreground">19:00</span>
+            </div>
+            <h3 className="font-semibold text-card-foreground mb-2">Mesa Redonda: BNCC na Prática</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Discussão sobre implementação da Base Nacional
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-muted-foreground">90 min • Online</span>
+              <Button size="sm" variant="outline">
+                Lembrar-me
+              </Button>
+            </div>
+          </div>
+
+          <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-green-500 shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex items-center justify-between mb-3">
+              <span className="px-2 py-1 bg-muted text-muted-foreground rounded-md text-sm font-medium">12/08</span>
+              <span className="text-sm text-muted-foreground">15:30</span>
+            </div>
+            <h3 className="font-semibold text-card-foreground mb-2">Webinar: Avaliação Digital</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Ferramentas modernas para avaliação de alunos
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-muted-foreground">45 min • Online</span>
+              <Button size="sm" variant="outline">
+                Inscrever-se
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Recent Images and Training Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Recent Images */}

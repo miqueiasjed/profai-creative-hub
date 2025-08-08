@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Play, Clock, BookOpen, Users, Star, Trophy, CheckCircle2 } from "lucide-react";
+import { Play, Clock, BookOpen, Users, Star, Trophy, CheckCircle2, Award } from "lucide-react";
 
 export default function Training() {
+  const navigate = useNavigate();
   const ongoingTrainings = [
     {
       id: 1,
@@ -144,7 +146,10 @@ export default function Training() {
                     <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     <span>{training.rating}</span>
                   </div>
-                  <Button className="flex items-center gap-2">
+                  <Button 
+                    className="flex items-center gap-2"
+                    onClick={() => navigate(`/training/course/${training.id}`)}
+                  >
                     <Play className="h-4 w-4" />
                     Continuar
                   </Button>
@@ -195,7 +200,10 @@ export default function Training() {
 
                 <Badge variant="outline">{training.category}</Badge>
 
-                <Button className="w-full">
+                <Button 
+                  className="w-full"
+                  onClick={() => navigate(`/training/course/${training.id}`)}
+                >
                   Iniciar Treinamento
                 </Button>
               </CardContent>
@@ -245,6 +253,37 @@ export default function Training() {
                   </p>
                 </div>
               ))}
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Quick Access to Certificates */}
+      <section>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-xl font-semibold text-foreground">Meus Certificados</h2>
+          <Button 
+            variant="outline" 
+            onClick={() => navigate("/certificates")}
+            className="flex items-center gap-2"
+          >
+            <Award className="h-4 w-4" />
+            Ver Todos
+          </Button>
+        </div>
+        <Card>
+          <CardContent className="p-6">
+            <div className="text-center space-y-4">
+              <Award className="h-12 w-12 text-primary mx-auto" />
+              <div>
+                <h3 className="font-medium text-foreground mb-2">Certificados Conquistados</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Você possui 3 certificados ativos. Continue aprendendo para conquistar mais!
+                </p>
+                <Button onClick={() => navigate("/certificates")}>
+                  Visualizar Certificados
+                </Button>
+              </div>
             </div>
           </CardContent>
         </Card>
